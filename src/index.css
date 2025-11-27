@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f23;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-semibold transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-700 hover:bg-gray-800 text-white rounded-lg font-semibold transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg focus:outline-none focus:border-red-600 transition-colors;
+  }
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
